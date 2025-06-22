@@ -6,3 +6,17 @@
   align-items: center;
   background-color: white;
 }
+.gridContainer{
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  z-index: 0;
+}
+.appScreen{
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
