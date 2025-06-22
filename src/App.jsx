@@ -4,19 +4,22 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Button from "./components/Button"
 import GridBackground from "./components/gridBackground/GridBackground"
-
+import Input from "./components/Input"
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
       <div className="gridContainer">
-        <GridBackground variant="dark"/>
+        <GridBackground variant="light"/>
       </div>
       <div className="appScreen">
         <Button btncolor="green" onClick={()=>alert("clicked!")}>Hotstar</Button>
       <Button btncolor="red" onClick={()=>alert("clicked!")}>Subscribe</Button>
       <Button btncolor="blue" onClick={()=>alert("clicked!")}>twitter</Button>
+        <div className="inputContainer">
+          <Input placeholder="Username..."/>
+        </div>
       </div>
     </div>
   )
