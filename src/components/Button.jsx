@@ -43,7 +43,8 @@ const Button = ({children,onClick,variant="primary",btncolor="blue"}) => {
     const color=colorMap[btncolor];
     const styles={
         primary:`${color.bg} text-white hover:bg-gradient-to-br shadow-lg ${color.shadow} transition-all transform duration-300 ease-in-out`,
-        secondary:"bg-gray-600 text-black hover:bg-gray-800",
+        secondary_black:"bg-black text-white border border-black border-2 hover:bg-[#e8e8e8] hover:text-black",
+        secondary_white:"bg-[#e8e8e8] text-black border border-black border-2 hover:bg-black hover:text-white",
     }
   return (
     <button onClick={onClick} className={`${base} ${styles[variant]}`}>
