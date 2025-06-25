@@ -8,6 +8,8 @@ import Input from "./components/Input";
 import person from "./assets/person.png";
 import MaterialInput from "./components/MaterialInput";
 import lock from "./assets/lock.png";
+import Toast from "./components/Toast"
+import tick from './assets/tick.svg'
 function App() {
   const [count, setCount] = useState(0);
   // console.log(typeof(person))
@@ -39,14 +41,20 @@ function App() {
             </div>
 
             <div className="buttons flex gap-6 mt-4">
-              <Button btncolor="red" variant="secondary_white" onClick={() => alert("clicked!")}>
+              <Button btncolor="red" className="btn" variant="secondary_white" onClick={() => alert("clicked!")}>
                 X
               </Button>
-              <Button btncolor="green" variant="secondary_black" onClick={() => alert("clicked!")}>
+              <Button btncolor="green" className="btn" variant="secondary_black" onClick={() => alert("clicked!")}>
                 Proceed
               </Button>
             </div>
           </form>
+          <div className="toastContainer">
+            <Toast variant="success" title="Hogaya" subtitle="this is a test run!"/>
+            <Toast variant="error" title="Nahi hua" subtitle="this is a test run!"/>
+            <Toast variant="warning" title="Gadbad lag rahi hai" subtitle="please use less words in subtitle for better visuals"/>
+            <Toast variant="notice" title="Apke liye message" subtitle="this is a test run!"/>
+          </div>
         </div>
       </div>
     </div>
