@@ -1,0 +1,33 @@
+.loader1{
+    height:80px;
+    aspect-ratio: 1;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    mask: conic-gradient(#000 0 0) content-box exclude,conic-gradient(#000 0 0);
+}
+
+.loader1:before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(#0000 0 5%,aqua,#0000 40% 50%) ;
+    animation: l2 1.5s linear infinite;
+}
+@keyframes l2 {
+    to{rotate:1turn;}
+}
+
+.loader2{
+    height: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    background:conic-gradient(red,purple,blue,green,yellow,orange,red);
+    animation: l3 1.5s linear infinite;
+    filter: blur(10px);
+    overflow: hidden;
+}
+@keyframes l3 {
+    to{rotate: 1turn;}
+}

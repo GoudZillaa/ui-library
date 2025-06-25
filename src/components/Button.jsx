@@ -36,7 +36,7 @@ const Button = ({children,onClick,variant="primary",btncolor="blue"}) => {
             shadow:"shadow-green-500/50 hover:shadow-green-600/50"
         },
         black:{
-            bg:"bg-gradient-to-r from-black-1000 via-black-700 to-purple-900",
+            bg:"bg-gradient-to-r from-black via-black to-purple-900",
             shadow:"shadow-purple-500/50 hover:shadow-purple-600/50"
         },
     }
