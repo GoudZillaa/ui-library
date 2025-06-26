@@ -1,16 +1,30 @@
 {
   "name": "@goudzillaa/ui-library",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.2",
   "main": "dist/ui-library.umd.js",
   "module": "dist/ui-library.es.js",
   "files": ["dist", "src"],
   "type": "module",
+  "description": "A simple and customizable UI library built with React and Tailwind CSS.",
+  "keywords": ["react", "ui-library", "components", "tailwindcss", "vite"],
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/GoudZillaa/ui-library.git"
+},
+"author": "GoudZillaa",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/ui-library.es.js",
+      "require": "./dist/ui-library.umd.js"
+    }
   },
   "dependencies": {
     "react": "^19.1.0",

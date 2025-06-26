@@ -9,6 +9,7 @@ import MaterialInput from "./components/MaterialInput";
 import lock from "./assets/lock.png";
 import Toast from "./components/Toast"
 import Loader from './components/loader/Loader'
+import GradientOverlay from './components/GradientOverlay'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <div className="gridContainer">
         <GridBackground variant="dark" />
+        <GradientOverlay/>
       </div>
       <div className="appScreen">
         <div className="formField flex gap-2">
