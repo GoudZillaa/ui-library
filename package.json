@@ -1,7 +1,6 @@
 {
   "name": "@goudzillaa/ui-library",
-  "private": false,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "dist/ui-library.umd.js",
   "module": "dist/ui-library.es.js",
   "files": ["dist", "src"],

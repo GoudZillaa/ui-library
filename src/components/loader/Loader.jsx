@@ -3,7 +3,7 @@ import './Loader.css'
 
 const Loader = ({variant}) => {
   return (
-    <div class={variant}></div>
+    <div className={variant}></div>
   )
 }
 
