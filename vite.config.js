@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [
@@ -10,7 +9,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.js'),
+      entry: './src/index.js',
       name: 'GoudZillaaUiLibrary',
       formats: ['es', 'cjs'],
       fileName: (format) => `index.${format === 'es' ? 'js' : 'cjs'}`
@@ -21,9 +20,19 @@ export default defineConfig({
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM'
+        },
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') return 'style.css'
+          return assetInfo.name
         }
       }
     },
-    cssCodeSplit: false, // Bundle CSS into single file
+    cssCodeSplit: false,
+    // This is important for CSS extraction in library mode
+    emptyOutDir: true
+  },
+  css: {
+    // Ensure CSS is processed
+    postcss: {}
   }
 })

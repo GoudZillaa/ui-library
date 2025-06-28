@@ -1,5 +1,4 @@
 import React from 'react'
-import './GridBackground.css'
 const gridBackground = ({variant="dark"}) => {
   const styles={
     dark:"bg-black",

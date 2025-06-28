@@ -10,6 +10,7 @@ import lock from "./assets/lock.png";
 import Toast from "./components/Toast"
 import Loader from './components/loader/Loader'
 import GradientOverlay from './components/GradientOverlay'
+import './styles.css'
 
 function App() {
   const [count, setCount] = useState(0);
